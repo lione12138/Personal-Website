@@ -3,28 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人资料</title>
+    <title>个人网站</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
+            display: flex;
+            height: 100vh;
             background-color: #f4f4f4;
         }
-        header {
+        nav {
+            width: 200px;
             background: #333;
             color: #fff;
-            padding: 10px 20px;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background: #444;
             text-align: center;
         }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
+        nav a:hover {
+            background: #555;
+        }
+        main {
+            flex: 1;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
         }
         .profile {
             display: flex;
@@ -46,21 +65,103 @@
         .profile-details p {
             margin: 5px 0;
         }
+        .download-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .download-link a {
+            text-decoration: none;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .download-link a:hover {
+            background: #555;
+        }
     </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>个人资料</h1>
-    </header>
-    <div class="container">
-        <div class="profile">
-            <img src="profile.jpg" alt="个人头像">
-            <div class="profile-details">
-                <h1>姓名：张三</h1>
-                <p>职业：前端开发工程师</p>
-                <p>简介：热爱编程与设计，擅长构建用户友好的网站和应用。</p>
+    <nav>
+        <a href="#" onclick="showSection('profile')">个人资料</a>
+        <a href="#" onclick="showSection('resume')">简历</a>
+        <a href="#" onclick="showSection('gent-questions')">根特50问</a>
+    </nav>
+    <main>
+        <div id="profile" class="section active">
+            <h1>个人资料</h1>
+            <div class="profile">
+                <img src="profile.png" alt="个人头像">
+                <div class="profile-details">
+                    <h1>姓名：Liuhuang Luo</h1>
+                    <p>职业：学生</p>
+                    <p>简介：目前在比利时根特大学攻读可持续与景观管理硕士学位，之前于河海大学完成水文与水资源工程本科。擅长编程语言（Python、C++等），并具有丰富的科研和实践经验。</p>
+                </div>
             </div>
         </div>
-    </div>
+        <div id="resume" class="section">
+            <h1>简历</h1>
+            <h2>个人信息</h2>
+            <p>姓名：Liuhuang Luo</p>
+            <p>地址：比利时东佛兰德省根特</p>
+            <p>邮箱：lionel8888888@gmail.com；Liuhuang.luo@Ugent.be</p>
+            <p>手机：+32 0456 12 72 94</p>
+
+            <h2>教育背景</h2>
+            <p><strong>根特大学</strong>（2024年9月-2026年6月）</p>
+            <p>硕士学位：可持续与景观管理</p>
+            <p><strong>河海大学</strong>（2020年9月-2024年6月）</p>
+            <p>本科：水文与水资源工程</p>
+            <p>GPA：3.91/5.0</p>
+
+            <h2>研究经验</h2>
+            <p><strong>毕业论文</strong>（2024年3月-2024年6月）</p>
+            <p>项目名称：基于长短期记忆网络算法的雅砻江流域中长期月径流预测</p>
+            <ul>
+                <li>使用主成分分析法（PCA）进行数据降维</li>
+                <li>利用随机森林模型、LSTM模型及改进的鲸鱼优化算法结合的LSTM模型（EWOA-LSTM）进行月径流预测</li>
+                <li>使用SHAP方法解释LSTM模型的预测结果</li>
+            </ul>
+
+            <h2>荣誉</h2>
+            <ul>
+                <li>优秀毕业论文（2024年6月）</li>
+                <li>第12届江苏省大学生知识竞赛优秀奖（2021年5月）</li>
+                <li>河海大学军训内务标兵（2020年9月）</li>
+                <li>中国高等教育计算机等级考试Python二级证书（2021年5月）</li>
+                <li>江苏省翻译比赛本科组优秀奖（2022年6月）</li>
+            </ul>
+
+            <h2>技能与能力</h2>
+            <p>编程语言：Python、C++、HTML、Matlab、MySQL、R</p>
+            <p>软件：Arcmap、QGIS、AutoCAD、Microsoft Office</p>
+            <p>计算机科学相关：自学计算机网络、操作系统、计算机组成原理、数据结构与算法</p>
+
+            <h2>实践经验</h2>
+            <ul>
+                <li>水文站日常观测及洪水数据整理（2023年6月-7月）</li>
+                <li>联想中国市场部暑期高考学生实践营销项目（2021年8月）</li>
+                <li>测量课程实习：熟练使用全站仪等仪器进行地形高程数据测量，并用CAD制图（2021年）</li>
+                <li>地理信息系统与遥感应用实习：使用ArcGIS与Envi处理雷达探测数据并生成图像数据（2022年）</li>
+                <li>水文原理课程实习：使用Python编写新安江模型并模拟江西地区实际水文过程（2023年）</li>
+                <li>水利计算课程实习：计算和规划水库容量及调度方案（2023年）</li>
+            </ul>
+            <div class="download-link">
+                <a href="curriculum_vitae.pdf" download>下载简历</a>
+            </div>
+        </div>
+        <div id="gent-questions" class="section">
+            <h1>根特50问</h1>
+            <p>这里可以放关于根特的问题与答案。</p>
+        </div>
+    </main>
 </body>
 </html>
