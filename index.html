@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人网站</title>
+    <title>獨尊太子煌</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,6 +14,7 @@
             height: 100vh;
             background-color: #f4f4f4;
         }
+
         nav {
             width: 200px;
             background: #333;
@@ -22,6 +24,7 @@
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -31,44 +34,55 @@
             background: #444;
             text-align: center;
         }
+
         nav a:hover {
             background: #555;
         }
+
         main {
             flex: 1;
             padding: 20px;
             overflow-y: auto;
         }
+
         .section {
             display: none;
         }
+
         .section.active {
             display: block;
         }
+
         .profile {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 20px;
         }
+
         .profile img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
         }
+
         .profile-details {
             flex: 1;
         }
+
         .profile-details h1 {
             margin: 0 0 10px;
         }
+
         .profile-details p {
             margin: 5px 0;
         }
+
         .download-link {
             margin-top: 20px;
             text-align: center;
         }
+
         .download-link a {
             text-decoration: none;
             background: #333;
@@ -77,6 +91,7 @@
             border-radius: 5px;
             display: inline-block;
         }
+
         .download-link a:hover {
             background: #555;
         }
@@ -89,11 +104,16 @@
         }
     </script>
 </head>
+
 <body>
     <nav>
         <a href="#" onclick="showSection('profile')">个人资料</a>
         <a href="#" onclick="showSection('resume')">简历</a>
         <a href="#" onclick="showSection('gent-questions')">根特50问</a>
+        <a href="#" onclick="showSection('gent-questions')">照片墙</a>
+        <a href="#" onclick="showSection('movies')">电影</a>
+        <a href="#" onclick="showSection('book')">书籍</a>
+        <a href="#" onclick="showSection('Food')">食谱</a>
     </nav>
     <main>
         <div id="profile" class="section active">
@@ -102,8 +122,98 @@
                 <img src="profile.png" alt="个人头像">
                 <div class="profile-details">
                     <h1>姓名：Liuhuang Luo</h1>
-                    <p>职业：学生</p>
-                    <p>简介：目前在比利时根特大学攻读可持续与景观管理硕士学位，之前于河海大学完成水文与水资源工程本科。擅长编程语言（Python、C++等），并具有丰富的科研和实践经验。</p>
+                    <p><b>性别</b>：男 &nbsp;&nbsp;&nbsp; <b>身高</b>：173cm &nbsp;&nbsp;&nbsp; <b>体重</b>：72kg</p>
+                    <p><b>职业</b>：学生、美食鉴赏家、入门咖啡品鉴师、读者、背包客、马拉松备选队员、初级甜点师、黄金后脸、汉密尔顿发烧、水文观测员、梦想是掌握十国招呼系统</p>
+                    <p><b>简介</b>：目前根特大学地下水硕士在读，前水之子。单身。</p>
+                    <p><b>语言能力</b>：中文(母语)；英文(C1)；意大利语(A1)；法语(B1)；荷兰语(B1)；韩语(B1)；日语(B1)</p>
+                    <p><b>阅读风格</b>：间断性改变，目前爱好——莫言</p>
+                    <p style="margin-left: 70px;">很喜欢的书：《红楼梦》《三体》《我与地坛》《从你的全世界路过》</p>
+                    </p>
+                    <p><b>饮品</b>：可乐只喝classic;咖啡偏好amaro和scuro(浓+苦);一般饮料不喝;奶茶记得三分糖，1L大桶装能顶两顿饭;酒量不详，头晕就撤</p>
+                    <p><b>游戏</b>:电子阳痿中~
+                    <p style="margin-left: 40px;">
+                        喜欢的：LOL(5000h的翡翠4)、大表哥2(神，鹿结局，真不吃牛肉)、GTA5(没玩过线上)、只狼(没修罗)、空洞骑士(苦痛已过，四门没过)、法环(本体白金)、黑神话(连战打不了一点)、城市天际线(格子工程师)、被美女包围了(妍妍)、CF(十年老兵)、
+                    </p>
+                    <p><strong>体育</strong>：跑步(有一个马拉松的梦)、羽毛球(又菜又爱玩)、台球(慢慢推到洞口先)
+                    </p>
+                    <p><strong>音乐剧</strong>：《汉密尔顿》《德扎》《唐璜》《Rent》《巴黎圣母院》</p>
+                    <p><strong>电影</strong>：《奥本海默》《沙丘2》《速激7》《美丽人生》《爱在黎明破晓前》《肖申克的救赎》《闻香识女人》</p>
+                    <div>
+                        <h2>精选照片</h2>
+                        <img src="个人照片/6b9e62c572ba2b7663dab3b8886be99.jpg" style="border-radius: 0;"
+                            onclick="openModal(this)">
+                        <img src="个人照片/9cf0c6bacc8ece4e7d2d975b5c57a30.jpg" style="border-radius: 0;"
+                            onclick="openModal(this)">
+                        <img src="个人照片/919f23db7e98d9a2986b19ca893d4dc.jpg" style="border-radius: 0;"
+                            onclick="openModal(this)">
+                        <img src="个人照片/6516d98635c7cdb69eec3a9e8c4a5b0.jpg" style="border-radius: 0;"
+                            onclick="openModal(this)">
+                        <img src="个人照片/3896586131122d043212823ce4f09dc.jpg" style="border-radius: 0;"
+                            onclick="openModal(this)">
+                        <img src="个人照片/d48415f068c42769475558d9a879b0a.jpg" style="border-radius: 0;"
+                            onclick="openModal(this)">
+
+                        <div id="myModal" class="modal">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <img class="modal-content" id="img01">
+                        </div>
+
+                        <style>
+                            .modal {
+                                display: none;
+                                position: fixed;
+                                z-index: 1;
+                                padding-top: 100px;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                overflow: auto;
+                                background-color: rgb(0, 0, 0);
+                                background-color: rgba(0, 0, 0, 0.9);
+                            }
+
+                            .modal-content {
+                                margin: auto;
+                                display: block;
+                                width: 80%;
+                                max-width: 700px;
+                                border-radius: 0;
+                            }
+
+                            .close {
+                                position: absolute;
+                                top: 15px;
+                                right: 35px;
+                                color: #fff;
+                                font-size: 40px;
+                                font-weight: bold;
+                                transition: 0.3s;
+                            }
+
+                            .close:hover,
+                            .close:focus {
+                                color: #bbb;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        </style>
+
+                        <script>
+                            function openModal(img) {
+                                const modal = document.getElementById("myModal");
+                                const modalImg = document.getElementById("img01");
+                                modal.style.display = "block";
+                                modalImg.src = img.src;
+                                modalImg.style.borderRadius = img.style.borderRadius;
+                            }
+
+                            function closeModal() {
+                                const modal = document.getElementById("myModal");
+                                modal.style.display = "none";
+                            }
+                        </script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -117,7 +227,7 @@
 
             <h2>教育背景</h2>
             <p><strong>根特大学</strong>（2024年9月-2026年6月）</p>
-            <p>硕士学位：可持续与景观管理</p>
+            <p>硕士学位：可持续土地管理</p>
             <p><strong>河海大学</strong>（2020年9月-2024年6月）</p>
             <p>本科：水文与水资源工程</p>
             <p>GPA：3.91/5.0</p>
@@ -179,11 +289,161 @@
                 <p><strong>出国之后，国内的医保还需要交嘛？</strong></p>
                 <p>几年内几乎不回国，看病也在国外看的话，应该是没有必要交，用不上。</p>
                 <p>......（内容省略，请添加完整内容）</p>
-            </div>
+            </div>x
             <div class="download-link">
                 <a href="根特行前一百问.docx" download>下载根特行前一百问</a>
             </div>
         </div>
+
+        <div id="movies" class="section">
+            <h1>电影</h1>
+            <p><strong>重庆森林</strong></p>
+            <p>评分：⭐⭐⭐<br>
+                好听的歌：梦中人<br>
+                故事线：女友阿May离开 --> 男主伤心 --> 买东西被女生看上 --> 天天偷偷去家里 --> 男上头但女离开 --> 男女一起走<br>
+                点评：很正常的港片，男女主颜值都很在线，但是第一遍看感觉没看懂就是说。所以男主被扎伤，就是因为女人去他家里玩的时候把钉子落下了？最后俩人一起去了加州嘛？女人居然为什么当上了空姐？！<br>
+                和前面那个贩毒女的故事怎么就戛然而止了？像什么劣质网站的拼接盗版电影。而且，女人的贩毒经历好像和男人也并没有任何关系啊，换个背景也能和男主喝酒啊。<br>
+                而且就是说，一个女的在你家住了那么久，天天去你家干这干那，你不会觉得她是神经病嘛？虽然确实好看，喜欢上也可以理解，但还是很神经啊！！<br>
+                而且男主连家里进人了都不知道，当个屁警察啊。还天天跟物品讲话，不会也是个精神病吧。所以就是两个精神病谈了？<br>
+                王家卫很喜欢用这种快速模糊的拖尾来表现动作快和场景混乱？<br>
+                不过确实前景慢后景快的表现手法很不错！</p>
+            <button onclick="addMovie()">添加新电影</button>
+            <div id="movie-list">
+                <!-- 这里可以显示电影列表 -->
+            </div>
+        </div>
+
+        <script>
+            // 从本地存储加载电影列表
+            function loadMovies() {
+                const movieList = document.getElementById('movie-list');
+                const movies = JSON.parse(localStorage.getItem('movies')) || [];
+                movies.forEach(movie => {
+                    const movieItem = document.createElement('div');
+                    movieItem.innerHTML = `
+                        <span onclick="toggleReview('${movie.name}')">${movie.name}</span>
+                        <div class="review" id="review-${movie.name}" style="display: none;">
+                            <textarea placeholder="输入影评..." oninput="saveReview('${movie.name}', this.value)">${movie.review || ''}</textarea>
+                        </div>`;
+                    movieList.appendChild(movieItem);
+                });
+            }
+
+            // 添加新电影并保存到本地存储
+            function addMovie() {
+                const movieList = document.getElementById('movie-list');
+                const newMovie = prompt('请输入电影名称:');
+                if (newMovie) {
+                    const movieItem = document.createElement('div');
+                    movieItem.innerHTML = `
+                        <span onclick="toggleReview('${newMovie}')">${newMovie}</span>
+                        <div class="review" id="review-${newMovie}" style="display: none;">
+                            <textarea placeholder="输入影评..." oninput="saveReview('${newMovie}', this.value)"></textarea>
+                        </div>`;
+                    movieList.appendChild(movieItem);
+
+                    // 保存到本地存储
+                    const movies = JSON.parse(localStorage.getItem('movies')) || [];
+                    movies.push({ name: newMovie, review: '' });
+                    localStorage.setItem('movies', JSON.stringify(movies));
+                }
+            }
+
+            // 展开或收起影评文本框
+            function toggleReview(movie) {
+                const reviewDiv = document.getElementById(`review-${movie}`);
+                if (reviewDiv.style.display === 'none') {
+                    reviewDiv.style.display = 'block';
+                } else {
+                    reviewDiv.style.display = 'none';
+                }
+            }
+
+            // 保存影评到本地存储
+            function saveReview(movieName, review) {
+                const movies = JSON.parse(localStorage.getItem('movies')) || [];
+                const movie = movies.find(m => m.name === movieName);
+                if (movie) {
+                    movie.review = review;
+                    localStorage.setItem('movies', JSON.stringify(movies));
+                }
+            }
+
+            // 页面加载时调用loadMovies函数
+            document.addEventListener('DOMContentLoaded', loadMovies);
+        </script>
+
+        <div id="Food" class="section">
+            <h1>食谱</h1>
+
+            <div id="foodModal" class="modal">
+                <span class="close" onclick="closeFoodModal()">&times;</span>
+                <img class="modal-content" id="foodImg">
+            </div>
+
+            <script>
+                function openFoodModal(img) {
+                    const modal = document.getElementById("foodModal");
+                    const modalImg = document.getElementById("foodImg");
+                    modal.style.display = "block";
+                    modalImg.src = img.src;
+                }
+
+                function closeFoodModal() {
+                    const modal = document.getElementById("foodModal");
+                    modal.style.display = "none";
+                }
+            </script>
+
+            <style>
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    padding-top: 100px;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+
+                .modal-content {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                }
+
+                .close {
+                    position: absolute;
+                    top: 15px;
+                    right: 35px;
+                    color: #fff;
+                    font-size: 40px;
+                    font-weight: bold;
+                    transition: 0.3s;
+                }
+
+                .close:hover,
+                .close:focus {
+                    color: #bbb;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            </style>
+            <p><strong>西红柿鸡蛋</strong></p>
+            <img src="Food/0b0eb20cc410f129b50d3e0ac86d69a.jpg" style="border-radius: 0; width: 200px; height: auto;" onclick="openFoodModal(this)">
+            <p>材料：西红柿、鸡蛋、葱<br>
+                调料：盐、糖<br>
+                做法：先炒鸡蛋，盛出。爆一下葱，再放西红柿炒一会，放盐出水，放鸡蛋。多放点糖做成甜口的。</p>
+            <button onclick="addMovie()">添加新食谱</button>
+            <div id="food-list">
+                <!-- 这里可以显示食谱列表 -->
+            </div>
+        </div>
     </main>
 </body>
+
 </html>

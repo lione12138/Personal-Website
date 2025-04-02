@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>獨尊太子煌</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        nav {
+            width: 200px;
+            background: #333;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            background: #444;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background: #555;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-details h1 {
+            margin: 0 0 10px;
+        }
+
+        .profile-details p {
+            margin: 5px 0;
+        }
+
+        .download-link {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .download-link a {
+            text-decoration: none;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .download-link a:hover {
+            background: #555;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="#" onclick="showSection('profile')">个人资料</a>
+        <a href="#" onclick="showSection('resume')">简历</a>
+        <a href="#" onclick="showSection('gent-questions')">根特50问</a>
+        <a href="#" onclick="showSection('gent-questions')">照片墙</a>
+    </nav>
+    <main>
+        <div id="profile" class="section active">
+            <h1>个人资料</h1>
+            <div class="profile">
+                <img src="profile.png" alt="个人头像">
+                <div class="profile-details">
+                    <h1>姓名：Liuhuang Luo</h1>
+                    <p><b>性别</b>：男 &nbsp;&nbsp;&nbsp; <b>身高</b>：173cm &nbsp;&nbsp;&nbsp; <b>体重</b>：72kg</p>
+                    <p><b>职业</b>：学生、美食鉴赏家、入门咖啡品鉴师、读者、背包客、马拉松备选队员、初级甜点师、黄金后脸、汉密尔顿发烧、水文观测员、梦想是掌握十国招呼系统</p>
+                    <p><b>简介</b>：目前根特大学地下水硕士在读，前水之子。单身。</p>
+                    <p><b>语言能力</b>：中文(母语)；英文(C1)；意大利语(A1)；法语(B1)；荷兰语(B1)；韩语(B1)；日语(B1)</p>
+                    <p><b>阅读风格</b>：间断性改变，目前爱好——莫言</p>
+                    <p style="margin-left: 70px;">很喜欢的书：《红楼梦》《三体》《我与地坛》《从你的全世界路过》</p>
+                    </p>
+                    <p><b>饮品</b>：可乐只喝classic;咖啡偏好amaro和scuro(浓+苦);一般饮料不喝;奶茶记得三分糖，1L大桶装能顶两顿饭;酒量不详，头晕就撤</p>
+                    <p><b>游戏</b>:电子阳痿中~
+                    <p style="margin-left: 40px;">
+                        喜欢的：LOL(5000h的翡翠4)、大表哥2(神，鹿结局，真不吃牛肉)、GTA5(没玩过线上)、只狼(没修罗)、空洞骑士(苦痛已过，四门没过)、法环(本体白金)、黑神话(连战打不了一点)、城市天际线(格子工程师)、被美女包围了(妍妍)、CF(十年老兵)、
+                    </p>
+                    <p><strong>体育</strong>：跑步(有一个马拉松的梦)、羽毛球(又菜又爱玩)、台球(慢慢推到洞口先)
+                    </p>
+                    <p><strong>音乐剧</strong>：《汉密尔顿》《德扎》《唐璜》《Rent》《巴黎圣母院》</p>
+                    <p><strong>电影</strong>：《奥本海默》《沙丘2》《速激7》《美丽人生》《爱在黎明破晓前》《肖申克的救赎》《闻香识女人》</p>
+                    <div>
+                        <h2>精选照片</h2>
+                        <img src="屏幕截图 2025-02-21 162101.png" border-radius: 0  >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="resume" class="section">
+            <h1>简历</h1>
+            <h2>个人信息</h2>
+            <p>姓名：Liuhuang Luo</p>
+            <p>地址：比利时东佛兰德省根特</p>
+            <p>邮箱：lionel8888888@gmail.com；Liuhuang.luo@Ugent.be</p>
+            <p>手机：+32 0456 12 72 94</p>
+
+            <h2>教育背景</h2>
+            <p><strong>根特大学</strong>（2024年9月-2026年6月）</p>
+            <p>硕士学位：可持续土地管理</p>
+            <p><strong>河海大学</strong>（2020年9月-2024年6月）</p>
+            <p>本科：水文与水资源工程</p>
+            <p>GPA：3.91/5.0</p>
+
+            <h2>研究经验</h2>
+            <p><strong>毕业论文</strong>（2024年3月-2024年6月）</p>
+            <p>项目名称：基于长短期记忆网络算法的雅砻江流域中长期月径流预测</p>
+            <ul>
+                <li>使用主成分分析法（PCA）进行数据降维</li>
+                <li>利用随机森林模型、LSTM模型及改进的鲸鱼优化算法结合的LSTM模型（EWOA-LSTM）进行月径流预测</li>
+                <li>使用SHAP方法解释LSTM模型的预测结果</li>
+            </ul>
+
+            <h2>荣誉</h2>
+            <ul>
+                <li>优秀毕业论文（2024年6月）</li>
+                <li>第12届江苏省大学生知识竞赛优秀奖（2021年5月）</li>
+                <li>河海大学军训内务标兵（2020年9月）</li>
+                <li>中国高等教育计算机等级考试Python二级证书（2021年5月）</li>
+                <li>江苏省翻译比赛本科组优秀奖（2022年6月）</li>
+            </ul>
+
+            <h2>技能与能力</h2>
+            <p>编程语言：Python、C++、HTML、Matlab、MySQL、R</p>
+            <p>软件：Arcmap、QGIS、AutoCAD、Microsoft Office</p>
+            <p>计算机科学相关：自学计算机网络、操作系统、计算机组成原理、数据结构与算法</p>
+
+            <h2>实践经验</h2>
+            <ul>
+                <li>水文站日常观测及洪水数据整理（2023年6月-7月）</li>
+                <li>联想中国市场部暑期高考学生实践营销项目（2021年8月）</li>
+                <li>测量课程实习：熟练使用全站仪等仪器进行地形高程数据测量，并用CAD制图（2021年）</li>
+                <li>地理信息系统与遥感应用实习：使用ArcGIS与Envi处理雷达探测数据并生成图像数据（2022年）</li>
+                <li>水文原理课程实习：使用Python编写新安江模型并模拟江西地区实际水文过程（2023年）</li>
+                <li>水利计算课程实习：计算和规划水库容量及调度方案（2023年）</li>
+            </ul>
+            <div class="download-link">
+                <a href="curriculum_vitae.pdf" download>下载简历</a>
+            </div>
+        </div>
+        <div id="gent-questions" class="section">
+            <h1>根特50问</h1>
+            <div>
+                <h2>钱钱钱</h2>
+                <p><strong>刚来要带多少欧元现金？</strong></p>
+                <p>800~1000欧即可，主要是防止一些不能刷卡的场景，以及交房租可能会需要现金(多换一点小面额的)</p>
+                <p><strong>生活费大概一个月多少？</strong></p>
+                <p>正常生活，基本没有旅游花费，且不胡吃海喝的话，800~1000欧每月，但刚来花费可能较多，可以参考主页记账帖子，有具体的每一项条目。</p>
+                <p><strong>学费怎么交？</strong></p>
+                <p>enrol之后学校会给你发邮件，会写转账具体信息和金额，通常是10.16之前转账过去就好了。</p>
+                <p><strong>日常购物如何付款？</strong></p>
+                <p>国内visa卡：在手机银行相应卡的支付设置中，把电子支付和跨行支付全部打开，就可以在这边直接刷卡支付了。</p>
+                <p>办国外卡：网上自助极速办理revolut账户，使用revolut的账户可以转账激活wise卡，wise办理实体卡，就可以到处刷了。</p>
+                <h2>日常生活</h2>
+                <p><strong>根特快递怎么拿？</strong></p>
+                <p>亚马逊：会送货上门，具体时间个人订单里都能看到，以及会告知你送到的具体地点，没人开门就会送到邻居家，软件上看到位置后自己敲门去取。</p>
+                <p><strong>有外卖服务嘛？</strong></p>
+                <p>有的，可以下载takeaway探索一下，毕竟送外卖的外国同学还是很多的。</p>
+                <p><strong>出国之后，国内的医保还需要交嘛？</strong></p>
+                <p>几年内几乎不回国，看病也在国外看的话，应该是没有必要交，用不上。</p>
+                <p>......（内容省略，请添加完整内容）</p>
+            </div>x 
+            <div class="download-link">
+                <a href="根特行前一百问.docx" download>下载根特行前一百问</a>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
